@@ -21,6 +21,9 @@ def get():
     print(data);
     return data
 
+on = [list((0, 0, 0)) for _ in range(8)];
+off = [list((255, 255, 255)) for _ in range(8)];
+
 p = machine.Pin(4, machine.Pin.OUT)
 np = neopixel.NeoPixel(p, 8)
 data = get()
